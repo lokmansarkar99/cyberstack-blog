@@ -27,7 +27,7 @@ app.use(express.urlencoded({ extended: true })); // Parse URL-encoded requests
 app.use(fileUpload({ useTempFiles: true })); // Enable file upload with temp file storage
 
 // CORS Configuration
-const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'];
+const allowedOrigins = process.env.ALLOWED_ORIGINS;
 app.use(
   cors({
     credentials: true,
